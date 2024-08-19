@@ -15,7 +15,7 @@ content-type: application/json
   "password": "12345"
 }
 
-### Get the currently signed in user
+### Get the currently signed in user who am I
 GET http://localhost:3000/auth/whoami
 
 ### Sign out
