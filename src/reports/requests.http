@@ -1,0 +1,12 @@
+POST http://localhost:3000/reports
+content-type: application/json
+
+{
+  "make": "Audi",
+  "model": "A4",
+  "year": 2010,
+  "mileage": 300000,
+  "lng": 0,
+  "lat": 0,
+  "price": 10000
+}
