@@ -3,18 +3,21 @@ content-type: application/json
 
 {
   "make": "Audi",
-  "model": "A4",
-  "year": 2010,
-  "mileage": 290000,
-  "lng": 0,
-  "lat": 0,
-  "price": 9700
+  "model": "A6",
+  "year": 2022,
+  "mileage": 30000,
+  "lng": 3,
+  "lat": 3,
+  "price": 41700
 }
 
 ### Approve an existing report
-PATCH http://localhost:3000/reports/1
+PATCH http://localhost:3000/reports/3
 content-type: application/json
 
 {
-  "approved": false
+  "approved": true
 }
+
+### Get an estimate for an existing vehicle
+GET http://localhost:3000/reports?make=Audi&model=A6&lng=0&lat=0&mileage=200000&year=2020
