@@ -14,6 +14,7 @@ import { User } from 'src/users/user.entity';
 import { Serialize } from 'src/interceptors/serialize.interceptor';
 import { ReportDto } from './dtos/report.dto';
 import { ApproveReportsDto } from './dtos/approve-reports.dto';
+import { AdminGuard } from 'src/guards/admin.guard';
 
 @Controller('reports')
 export class ReportsController {
@@ -26,6 +27,7 @@ export class ReportsController {
     return this.reportsService.create(body, user);
   }
 
+  @UseGuards(AdminGuard)
   @Patch('/:id')
   async approveReport(
     @Param('id') id: string,
