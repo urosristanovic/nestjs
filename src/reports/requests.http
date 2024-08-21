@@ -5,8 +5,16 @@ content-type: application/json
   "make": "Audi",
   "model": "A4",
   "year": 2010,
-  "mileage": 300000,
+  "mileage": 290000,
   "lng": 0,
   "lat": 0,
-  "price": 10000
+  "price": 9700
+}
+
+### Approve an existing report
+PATCH http://localhost:3000/reports/1
+content-type: application/json
+
+{
+  "approved": true
 }
